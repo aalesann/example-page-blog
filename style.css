@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: #c9c1c1;
+}
+
+.contenedor {
+    height: 100vh;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 10px;
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: 
+    "nav nav nav"
+    "main main sidebar"
+    "widget-1 widget-2 sidebar"
+    "footer footer footer";
+}
+
+.contenedor div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .widget-1,
+.contenedor .widget-2,
+.contenedor .footer {
+    background: #fff;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.contenedor .header nav ul {
+    list-style: none;
+}
+
+.contenedor .header nav ul li {
+    display: inline;
+}
+
+.contenedor .header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+
+}
+
+.contenedor .header nav ul li a:hover {
+    border-bottom: 1px solid #fff;
+    color: white;
+    transition: border-bottom 4.9 ease; 
+}
+
+.contenedor .header {
+    background: #1e1ec4;
+    grid-area: nav;
+    padding: 20px;
+}
+
+.contenedor .contenido {
+    grid-area: main;
+}
+
+.contenedor .sidebar {
+    grid-area: sidebar;
+    background: #1e1ec4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+    text-align: center;
+    padding: 20px;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+    text-align: center;
+    background: #1e1ec4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.contenedor .pie-articulo {
+    font-style: italic;
+    color: #1e1ec4;
+}
+
+.contenedor .contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contenedor .contenido img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.contenedor .contenido .section {
+    display: flex;
+      gap: 5px;
+}
+
+.contenedor .contenido .section .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+      gap: 5px;
+}
